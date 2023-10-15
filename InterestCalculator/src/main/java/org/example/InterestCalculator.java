@@ -21,15 +21,17 @@ public class InterestCalculator {
 
             double interest = value * rate;
 
+            System.out.println();
+
             String formattedNumber = String.format("%,.2f", value);
-            System.out.println("$" + formattedNumber);
+            System.out.println("Loan amount: $" + formattedNumber);
 
             BigDecimal number = BigDecimal.valueOf(rate);
             BigDecimal percentValue = number.movePointRight(2);
-            System.out.println(percentValue + "%" + "");
+            System.out.println("Interest rate: "+ percentValue + "%" + "");
 
             formattedNumber = String.format("%,.2f", interest);
-            System.out.println("$" + formattedNumber);
+            System.out.println("Interest: $" + formattedNumber + "\n");
 
             System.out.print("Continue? (y/n): ");
             choice = sc.next();
