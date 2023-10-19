@@ -9,7 +9,7 @@ public class Main {
         String choice = "y";
         System.out.println("Greatest Common Divisor Finder \n");
 
-        
+
 
 
         while (choice.equalsIgnoreCase("y")) {
