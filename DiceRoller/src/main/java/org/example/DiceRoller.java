@@ -7,9 +7,12 @@ public class DiceRoller {
         Scanner sc = new Scanner(System.in);
         String choice = "y";
 
-        while (!choice.equalsIgnoreCase("n")) {
+        while (choice.equalsIgnoreCase("y")) {
             System.out.print("Roll the dice? (y/n): ");
             choice = sc.next();
+            if (!choice.equalsIgnoreCase("y")) {
+                break;
+            }
             System.out.println();
 
             int dice1 = dice1();
@@ -28,8 +31,10 @@ public class DiceRoller {
                 System.out.println("Boxcars!");
             }
             System.out.println();
-
+            System.out.print("Roll again? (y/n): ");
+            choice = sc.next();
         }
+        System.out.println("\nGoodbye!");
     }
 
    public static int dice1() {
