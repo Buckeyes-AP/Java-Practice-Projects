@@ -7,7 +7,10 @@ public class Console {
 
     public static void displayWelcome(int limit) {
         System.out.println("Welcome to the guess number game!");
-        System.out.println("I'm thinking of a number from 1 to " + limit);
+        System.out.println("+++++++++++++++++++++++++++++++++");
+        System.out.println();
+        System.out.println("I'm thinking of a number from 1 to " + limit + ".");
+        System.out.println("Try to guess it.");
         System.out.println();
     }
 
