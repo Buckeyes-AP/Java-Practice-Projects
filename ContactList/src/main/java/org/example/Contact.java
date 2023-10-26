@@ -15,6 +15,8 @@ public class Contact {
         phone = "";
     }
 
+
+
     // set and get methods for code variable
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -31,11 +33,18 @@ public class Contact {
     public void setEmail(String email) {
         this.email = email;
     }
-    public void getPhone(String phone) {
+    public String getEmail() {
+        return email;
+    }
+    public void setPhone(String phone) {
         this.phone = phone;
     }
-    public String displayContact(String firstName, String lastName, String email, String phone) {
-        String name = firstName + lastName;
+    public String getPhone() {
+        return phone;
+    }
+
+    public String displayContact() {
+        String name = firstName + " " + lastName;
         return "Name: " + name + "\n" + "Email Address: " + email + "\n" + "Phone Number: " + phone;
     }
 }
