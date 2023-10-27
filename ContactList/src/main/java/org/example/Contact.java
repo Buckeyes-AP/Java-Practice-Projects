@@ -44,7 +44,11 @@ public class Contact {
     }
 
     public String displayContact() {
-        String name = firstName + " " + lastName;
-        return "Name: " + name + "\n" + "Email Address: " + email + "\n" + "Phone Number: " + phone;
+        String name = "Name:\t\t\t" + firstName + " " + lastName + "\n";
+        String emailAddress = "Email Address:\t" + email + "\n";
+        String phoneNumber = "Phone Number:\t" + phone + "\n";
+        String dash = "---------------------------\n";
+        String title = "--- Current Contact -------\n";
+        return "\n" + dash + title + dash + name + emailAddress + phoneNumber + dash;
     }
 }
