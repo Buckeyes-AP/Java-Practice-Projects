@@ -5,8 +5,11 @@ import java.util.Scanner;
 public class Console {
     private static Scanner sc = new Scanner(System.in);
 
+    public static void displayWelcome() {
+        System.out.println("Welcome to the Letter Grade Converter\n");
+    }
     public static String getString(String prompt) {
-        System.out.println(prompt);
+        System.out.print(prompt);
         return sc.nextLine();
     }
 
@@ -27,11 +30,11 @@ public class Console {
 
     public static int getInt(String prompt) {
         while (true) {
-            System.out.println(prompt);
+            System.out.print(prompt);
             try {
                 return Integer.parseInt(sc.nextLine());
             } catch(NumberFormatException e) {
-                System.out.println("Error! Invalid integer value");
+                System.out.println("Error! Invalid integer. Try again.");
             }
         }
     }
