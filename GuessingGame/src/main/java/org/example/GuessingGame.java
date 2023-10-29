@@ -7,17 +7,16 @@ import static org.example.Console.*;
 public class GuessingGame {
     public static void main(String[] args) {
 
-
-
         displayWelcome();
-
 
         String choice = "y";
 
         while (choice.equalsIgnoreCase("y")) {
-            int count = 0;
-            int guess = 0;
-            int theNumber = (int) (Math.random() * 100) + 1;
+            Game game = new Game();
+
+            int theNumber = game.getTheNumber();
+            int guess = game.getGuess();
+            int count = game.getCount();
 
             System.out.println("Hint: # is " + theNumber);
 
@@ -51,6 +50,6 @@ public class GuessingGame {
             choice = Console.getString("Try again(y/n)?: ", "y", "n");
             System.out.println();
         }
-
+        System.out.println("Goodbye!");
     }
 }
